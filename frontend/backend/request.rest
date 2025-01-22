@@ -1,0 +1,70 @@
+### PATIENT REQUESTS ###
+GET http://localhost:5000/patients
+
+###
+GET http://localhost:5000/patients/1
+
+###
+POST http://localhost:5000/patients
+Content-Type: application/json
+
+{
+    "name": "I Sakit Basange",
+    "age": 21,
+    "gender": "MALE",
+    "address": "Jln. Jalan, No.3",
+    "diagnosis": "DIABETES",
+    "doctorId" : 3
+}
+
+###
+PATCH http://localhost:5000/patients/2
+Content-Type: application/json
+
+{
+    "name": "I Made Sakit Gede Basange",
+    "age": 21,
+    "gender": "MALE",
+    "address": "Jln. Jalan, No.3",
+    "diagnosis": "DIABETES",
+    "doctorId" : null,
+    "isActive" : false
+}
+
+###  
+DELETE http://localhost:5000/patients/1
+
+### DOCTOR REQUESTS ###
+GET http://localhost:5000/doctors
+
+###
+GET http://localhost:5000/doctors/1
+
+###
+POST http://localhost:5000/doctors
+Content-Type: application/json
+
+{
+    "name": "Dr. I Putu Balyan S.Ked M.Ked",
+    "age": 40,
+    "gender": "MALE",
+    "address": "Jln. Kaki, No.2.",
+    "specialty": "GENERAL_MEDICINE"
+ 
+}
+
+###
+PATCH http://localhost:5000/doctors/1
+Content-Type: application/json
+
+{
+    "name": "Dr. I Putu Balyan S.Ked M.Ked Updated",
+    "age": 40,
+    "gender": "MALE",
+    "address": "Jln. Kaki, No.2.",
+    "specialty": "GENERAL_MEDICINE",
+    "isActive" : true
+}
+
+### 
+DELETE http://localhost:5000/doctors/2
