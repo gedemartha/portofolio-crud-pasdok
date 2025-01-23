@@ -5,11 +5,10 @@ const prisma = new PrismaClient();
 export const getDoctors = async (req, res) => {
   try {
     const response = await prisma.doctor.findMany();
-    if (response.length > 0) {
+    
       res.status(200).json(response);
-    } else {
-      res.status(400).json(`Doctors are empty !!! ${response}`);
-    }
+    
+    
   } catch (error) {
     res.status(500).json({ msg: error.message });
   }

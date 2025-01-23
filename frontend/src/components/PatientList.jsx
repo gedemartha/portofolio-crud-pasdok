@@ -12,6 +12,7 @@ const PatientList = () => {
   };
 
   const { data } = useSWR("patients", fetcher);
+  console.log({data});
   if (!data) return <h2>Loading...</h2>;
 
   const deletePatient = async (patientId) => {

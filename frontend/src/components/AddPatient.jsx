@@ -131,7 +131,7 @@ const AddPatient = () => {
                 value={doctorId}
                 onChange={(e) => setDoctorId(e.target.value)}
               >
-                <option value="">Select a doctor</option>
+                <option value="">unassigned</option>
                 {doctors.map((doc) => (
                   <option key={doc.id} value={doc.id}>
                     {doc.name}

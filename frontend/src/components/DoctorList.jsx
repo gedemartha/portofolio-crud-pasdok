@@ -12,10 +12,11 @@ const DoctorList = () => {
   };
 
   const { data } = useSWR("doctors", fetcher);
+  console.log({data});
   if (!data) return <h2>Loading...</h2>;
 
-  const deletePatient = async (patientId) => {
-    await axios.delete(`http://localhost:5000/doctors/${patientId}`);
+  const deletePatient = async (doctorId) => {
+    await axios.delete(`http://localhost:5000/doctors/${doctorId}`);
     mutate("doctors");
   };
 
